@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<testdata xmlns="http://aludratest.org/testdata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aludratest.org/testdata http://aludratest.github.io/aludratest/schema/draft/testdata.xsd" version="1.0">
+<metadata>
+	<segments>
+		<segment name="searchData"
+			dataClassName="org.aludratest.tutorial.ikea.search.IkeaSearchData">
+		<fields>
+			<field name="searchText" />
+		</fields>
+		</segment>
+		<segment name="invalidPriceRangeData"
+			dataClassName="org.aludratest.tutorial.ikea.search.PriceRangeData">
+		<fields>
+			<field name="minPrice" />
+			<field name="maxPrice" />
+		</fields>
+		</segment>
+		<segment name="validPriceRangeData"
+			dataClassName="org.aludratest.tutorial.ikea.search.PriceRangeData">
+		<fields>
+			<field name="minPrice" />
+			<field name="maxPrice" />
+		</fields>
+		</segment>
+	</segments>
+</metadata>
+<configurations>
+	<configuration name="searchStenstorp">
+		<segments>
+			<segment name="searchData">
+				<fieldValues>
+					<fieldValue name="searchText">
+						<value>stenstorp</value>
+					</fieldValue>
+				</fieldValues>
+			</segment>
+			<segment name="invalidPriceRangeData">
+				<fieldValues>
+					<fieldValue name="minPrice">
+						<value>1000</value>
+					</fieldValue>
+					<fieldValue name="maxPrice">
+						<value>2000</value>
+					</fieldValue>
+				</fieldValues>
+			</segment>
+			<segment name="validPriceRangeData">
+				<fieldValues>
+					<fieldValue name="minPrice">
+						<value>10</value>
+					</fieldValue>
+					<fieldValue name="maxPrice">
+						<value>200</value>
+					</fieldValue>
+				</fieldValues>
+			</segment>
+		</segments>
+	</configuration>
+</configurations>
+</testdata>
